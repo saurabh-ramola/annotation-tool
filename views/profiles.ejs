@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Annotating File <%=name%> </title>
+	<style>
+
+		body {
+			background-color: #2ecc71;
+		}
+	</style>
+</head>
+	<body>
+		<form id="annotation-form" method="POST" action="/newpage">
+			<p style="text-align:center"> Annotating File <input type="text" name = "file_name" value="<%=name%>"> </p>
+			<%for (var result in data){%>
+			  <li><%=result%>:<%=data[result]%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  <select name="<%= result %>" >
+			  	<option disabled selected value> -- select an option -- </option>
+			  	<option value="t1-start">t1-start</option>
+			  	<option value="t1-end">t1-end</option>
+			  	<option value="t2-start">t2-start</option>
+			  	<option value="t2-end">t2-end</option> 
+			  	<option value="t3-start">t3-start</option>
+			  	<option value="t3-end">t3-end</option>
+			  	<option value="t4-start">t4-start</option>
+			  	<option value="t4-end">t4-end</option>
+			  	<option value="t5-start">t5-start</option>
+			  	<option value="t5-end">t5-end</option>
+			  	<option value="t6-start">t6-start</option>
+			  	<option value="t6-end">t6-end</option>
+			  	<option value="t7-start">t7-start</option>
+			  	<option value="t7-end">t7-end</option>
+			  	<option value="t8-start">t8-start</option>
+			  	<option value="t8-end">t8-end</option>
+			  	<option value="t9-start">t9-start</option>
+			  	<option value="t9-end">t9-end</option>
+			  	<option value="t10-start">t10-start</option>
+			  	<option value="t10-end">t10-end</option>
+			  	<option value="t11-start">t11-start</option>
+			  	<option value="t11-end">t11-end</option> 
+			  </select></li>
+			  <%}%>
+			  <div style="text-align:center ;line-height: 200px;">
+			  <input type = "submit" value="submit" style="width: 300px; margin: 0 auto; width: 20em;  height: 2.5em; background-color: #2980b9"/></div>
+		</form>
+ 	</body>
+</html>

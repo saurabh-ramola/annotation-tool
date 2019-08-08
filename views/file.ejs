@@ -1,0 +1,26 @@
+<html>
+<head>
+	<style>
+		body {
+			background-color: #f1c40f;
+		}
+	</style>
+</head>
+	<body>
+		<h1 style="text-align: center ; line-height: 200px;">
+		<p> Choose a file from the list of files  </p>
+		<form id = 'file-form' method="POST" action='/'>
+			  <select name="file_name" >
+			  	<option disabled selected value> -- select an option -- </option>
+
+				<%for (var result in data){%>
+			  	<option name = "file"><%=data[result]%></option>
+			  <%}%>
+							  	
+			  </select>
+			  <input type="submit" value="submit"/>
+
+			</form>
+
+ 	</body>
+</html>
